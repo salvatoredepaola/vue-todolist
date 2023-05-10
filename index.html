@@ -10,20 +10,23 @@
 </head>
 <body>
     
-    <div id="app">
-
-        <input v-model="newTask" @keyUp.enter="addTask()" type="text" placeholder="descrivi la nuova attività">
-        <button class="btn" @click="addTask()">aggiungi task</button>
-        <div>   
+    <div class="container bg rounded">
+        <div id="app">
+            <div class="d-flex center">
+                <input class="mr" v-model="newTask" @keyUp.enter="addTask()" type="text" placeholder="descrivi la nuova attività">
+                <button class="btn" @click="addTask()">Add</button>
+            </div>
             <ul class="p">
-                <li :class="(this.taskList[i].done == false) ? 'p incompleto' : 'p completato'" v-for="(task, i) in taskList" >
-                    {{task.text}} 
+                <li :class="(this.taskList[i].done == false) ? 'p incompleto d-flex space-between' : 'p completato d-flex space-between'" v-for="(task, i) in taskList" >
+                        {{task.text}} 
                     <button @click="cambiaTask(i)" class="btn completato">&check;</button> 
             </ul>
+            <div class="d-flex center">
+                <button @click="rimuoviTask(i)" class="btn incompleto">&cross; Remove All</button></li>
+            </div>
         </div>
-        <button @click="rimuoviTask(i)" class="btn incompleto">&cross;</button></li>
-        
     </div>
+    
 
     <script src="./js/script.js"></script>
 </body>

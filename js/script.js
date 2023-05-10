@@ -3,11 +3,12 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+
             newTask: "",
             taskList: [
                 { text: "lavorare", done: false},
                 { text: "Pagare", done: false},
-                { text: "comprare", done: false},
+                { text: "Comprare", done: false},
             ]
         }
     },
@@ -20,7 +21,7 @@ createApp({
                     text: this.newTask,
                     done: false,
                 }
-                this.taskList.unshift(newTask);
+                this.taskList.push(newTask);
             }
             this.newTask = "";
 
@@ -31,7 +32,7 @@ createApp({
         },
         cambiaTask(i) {
             this.taskList[i].done = ! this.taskList[i].done;
-
         },
+
     }
 }).mount('#app')

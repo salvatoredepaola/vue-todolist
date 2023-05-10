@@ -1,13 +1,38 @@
 body{
+    background-color: #222;
     font-family: sans-serif;
     font-weight: 600;
 }
-
+.bg{
+    background-color: #e9e9ed;
+}
+.rounded{
+    border-radius: 20px;
+}
+#app{
+    padding: 1em;
+}
+.container{
+    width: 300px;
+    margin: 0 auto;
+}
 .btn {
     background-color: #e9e9ed;
     border-radius: 7px;
     border: 1px solid #a9a9b3;
     margin-right: 8px;
+}
+.mr{
+    margin-right: 8px;
+}
+.d-flex{
+    display: flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+.center{
+    justify-content: center;
 }
 .btn:hover{
     cursor: pointer;
@@ -18,6 +43,7 @@ body{
     transform: scale(0.9999);
 }
 .p{
+    list-style-type: none;
     padding: 5px 0;
 }
 .completato{
@@ -28,4 +54,10 @@ body{
 .incompleto {
     color: crimson;
     font-weight: 600;
+}
+input{
+    background-color: #e9e9ed;
+    border-radius: 5px;
+    border: 1px solid #a9a9b3;
+    margin-right: 8px;
 }
