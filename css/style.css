@@ -1,0 +1,31 @@
+body{
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #e9e9ed;
+    border-radius: 7px;
+    border: 1px solid #a9a9b3;
+    margin-right: 8px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #dadada;
+    transform: scale(1.09);
+}
+.btn:active{
+    transform: scale(0.9999);
+}
+.p{
+    padding: 5px 0;
+}
+.completato{
+    color: green;
+    font-weight: 600;
+    /* text-decoration: line-through; */
+}
+.incompleto {
+    color: crimson;
+    font-weight: 600;
+}

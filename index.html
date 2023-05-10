@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div id="app">
+
+        <input v-model="newTask" @keyUp.enter="addTask()" type="text" placeholder="descrivi la nuova attività">
+        <button class="btn" @click="addTask()">aggiungi task</button>
+        <div>   
+            <ul class="p">
+                <li :class="(this.taskList[i].done == false) ? 'p incompleto' : 'p completato'" v-for="(task, i) in taskList" >
+                    {{task.text}} 
+                    <button @click="cambiaTask(i)" class="btn completato">&check;</button> 
+            </ul>
+        </div>
+        <button @click="rimuoviTask(i)" class="btn incompleto">&cross;</button></li>
+        
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
